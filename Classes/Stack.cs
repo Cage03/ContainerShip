@@ -3,6 +3,7 @@ namespace ContainerShip.Classes;
 public class Stack
 {
     public List<Container> Containers = new();
+    public int weight;
 
     public bool PlaceContainer(Container container)
     {
@@ -20,6 +21,7 @@ public class Stack
             totalWeight += container1.weight;
         }
 
+        weight = totalWeight;
         if (container.weight > highestWeightContainer.weight)
         {
             totalWeight -= container.weight;
@@ -34,5 +36,30 @@ public class Stack
         Containers.Add(container);
         Containers.Add(highestWeightContainer);
         return true;
+    }
+
+    public string StackUrl()
+    {
+        string url = "";
+        foreach (var container in Containers)
+        {
+            url += $"{(int)container.type + 1}";
+        }
+
+        return url;
+    }
+
+    public string WeightUrl()
+    {
+        string url = "";
+        foreach (var container in Containers)
+        {
+            url += $"-{container.weight}";
+        }
+        if (url == "")
+        {
+            return url;
+        }
+        return url.Substring(1);
     }
 }

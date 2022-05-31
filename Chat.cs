@@ -1,3 +1,5 @@
+using ContainerShip.Classes;
+
 namespace ContainerShip;
 
 public class Chat
@@ -121,6 +123,7 @@ public class Chat
             Console.WriteLine("-------------------------------------------------------");
         }
     }
+    
 
     public bool BiggerThanZero(int input)
     {
@@ -131,4 +134,6 @@ public class Chat
     {
         return input >= 0;
     }
+    
+    
 }

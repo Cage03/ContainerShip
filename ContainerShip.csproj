@@ -7,4 +7,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="ContainerShipTests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ContainerShipTests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ContainerShipTests\**" />
+    </ItemGroup>
+
 </Project>

@@ -23,8 +23,9 @@ public class Container
 
 public enum Type
 {
-    CooledValuable,
-    Cooled,
+    Standard,
     Valuable,
-    Standard
+    Cooled,
+    CooledValuable
+    
 }
