@@ -26,6 +26,14 @@ public class Program
         dockyard.PlaceValuable();
         dockyard.PlaceCooled();
         dockyard.PlaceStandard();
+        dockyard.ReverseLists();
+
+        if (dockyard._dockedShip.MaxWeight >
+            dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2)
+        {
+            Console.WriteLine("50% of ships weight has to be used");
+            UserInterface();
+        }
 
         Console.WriteLine("Visualisation string:");
         Console.WriteLine("\n" + Visualisation(ship.Rows, ship.Rows.Count, ship.Rows[0].Stacks.Count));

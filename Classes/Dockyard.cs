@@ -50,7 +50,7 @@ public class Dockyard
             if (_dockedShip.MaxWeight - CooledContainers[i].weight <= 0) return;
 
             //whenever widthIndex reaches the amount of rows, widthIndex = 0 to restart the cycle
-            for (;widthIndex >= _dockedShip.Rows.Count;)
+            for (; widthIndex >= _dockedShip.Rows.Count;)
             {
                 widthIndex -= _dockedShip.Rows.Count;
             }
@@ -205,5 +205,16 @@ public class Dockyard
         }
 
         return false;
+    }
+
+    public void ReverseLists()
+    {
+        foreach (var row in _dockedShip.Rows)
+        {
+            foreach (var stack in row.Stacks)
+            {
+                stack.Containers.Reverse();
+            }
+        }
     }
 }
