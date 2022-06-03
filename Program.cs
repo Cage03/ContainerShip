@@ -2,6 +2,8 @@
 using ContainerShip;
 using ContainerShip.Classes;
 using Type = ContainerShip.Classes.Type;
+using Fleck;
+using Newtonsoft.Json;
 
 public class Program
 {
@@ -31,7 +33,12 @@ public class Program
         if (dockyard._dockedShip.MaxWeight >
             dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2)
         {
+            var currentWeight =
+                dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 -
+                dockyard._dockedShip.MaxWeight;
             Console.WriteLine("50% of ships weight has to be used");
+            Console.WriteLine("Current weight = " + currentWeight);
+            Console.WriteLine("Minimum weight for a ship this size = " + dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2);
             UserInterface();
         }
 

@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+
 
 namespace ContainerShip.Classes;
 
@@ -66,6 +70,10 @@ public class Dockyard
                 widthIndex /= 2;
             }
 
+            if (!_dockedShip.Rows[widthIndex].Stacks[0].PlaceContainer(CooledContainers[i]))
+            {
+                return;
+            }
             _dockedShip.Rows[widthIndex].Stacks[0].PlaceContainer(CooledContainers[i]);
             _dockedShip.MaxWeight -= CooledContainers[i].weight;
         }
@@ -109,7 +117,11 @@ public class Dockyard
             {
                 widthIndex /= 2;
             }
-
+            
+            if (!_dockedShip.Rows[widthIndex].Stacks[0].PlaceContainer(CooledContainers[i]))
+            {
+                return;
+            }
             _dockedShip.Rows[widthIndex].Stacks[lengthIndex]
                 .PlaceContainer(ValuableContainers[i]);
             _dockedShip.MaxWeight -= ValuableContainers[1].weight;
@@ -191,7 +203,7 @@ public class Dockyard
     //checks if a certain stack contains a valuable type container
     public bool IsValuable(int widthIndex, int lengthIndex)
     {
-        if (lengthIndex <= _dockedShip.Rows.Count)
+        if (lengthIndex >= _dockedShip.Rows.Count)
         {
             return false;
         }
