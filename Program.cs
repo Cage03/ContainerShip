@@ -30,6 +30,14 @@ public class Program
         dockyard.PlaceStandard();
         dockyard.ReverseLists();
 
+        CheckWeight(dockyard);
+
+        Console.WriteLine("Visualisation string:");
+        Console.WriteLine("\n" + Visualisation(ship.Rows, ship.Rows.Count, ship.Rows[0].Stacks.Count));
+    }
+
+    private static void CheckWeight(Dockyard dockyard)
+    {
         if (dockyard._dockedShip.MaxWeight >
             dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2)
         {
@@ -38,12 +46,10 @@ public class Program
                 dockyard._dockedShip.MaxWeight;
             Console.WriteLine("50% of ships weight has to be used");
             Console.WriteLine("Current weight = " + currentWeight);
-            Console.WriteLine("Minimum weight for a ship this size = " + dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2);
+            Console.WriteLine("Minimum weight for a ship this size = " +
+                              dockyard._dockedShip.Rows.Count * dockyard._dockedShip.Rows[0].Stacks.Count * 150000 / 2);
             UserInterface();
         }
-
-        Console.WriteLine("Visualisation string:");
-        Console.WriteLine("\n" + Visualisation(ship.Rows, ship.Rows.Count, ship.Rows[0].Stacks.Count));
     }
 
     public static string Visualisation(List<Row> rows, int width, int length)

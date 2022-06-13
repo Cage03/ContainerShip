@@ -19,7 +19,7 @@ public class ContainerTest
         var container = new Container(type);
         //assert
         Assert.IsTrue(container.weight > 0);
-        Assert.AreEqual(Type.Standard, container.type);
+        Assert.AreEqual(Type.Standard, container.type, "Container is not of type standard");
     }
     [TestMethod]
     public void CreateValuableContainer()
@@ -30,7 +30,7 @@ public class ContainerTest
         var container = new Container(type);
         //assert
         Assert.IsTrue(container.weight > 0);
-        Assert.AreEqual(Type.Valuable, container.type);
+        Assert.AreEqual(Type.Valuable, container.type, "Container is not of type valuable");
     }
     [TestMethod]
     public void CreateCooledValuableContainer()
@@ -41,7 +41,7 @@ public class ContainerTest
         var container = new Container(type);
         //assert
         Assert.IsTrue(container.weight > 0);
-        Assert.AreEqual(Type.CooledValuable, container.type);
+        Assert.AreEqual(Type.CooledValuable, container.type, "Container is not of type cooledValuable");
     }
     [TestMethod]
     public void CreateCooledContainer()
@@ -52,7 +52,7 @@ public class ContainerTest
         var container = new Container(type);
         //assert
         Assert.IsTrue(container.weight > 0);
-        Assert.AreEqual(Type.Cooled, container.type);
+        Assert.AreEqual(Type.Cooled, container.type, "Container is not of type cooled");
     }
     [TestMethod]
     public void CreateEmptyContainer()
@@ -62,7 +62,7 @@ public class ContainerTest
         //act
         var container = new Container(0, type);
         //assert
-        Assert.AreEqual(0, container.weight);
-        Assert.AreEqual(Type.Cooled, container.type);
+        Assert.AreEqual(0, container.weight, "Container weight is not zero");
+        Assert.AreEqual(Type.Cooled, container.type, "Container type is not Cooled");
     }
 }

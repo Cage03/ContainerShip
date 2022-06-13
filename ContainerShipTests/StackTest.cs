@@ -15,8 +15,9 @@ public class StackTest
         //act
         stack.PlaceContainer(container);
         //assert
-        Assert.AreEqual(container, stack.Containers[0]);
+        Assert.AreEqual(container, stack.Containers[0], "Container not placed correctly");
     }
+
     [TestMethod]
     public void PlaceWeightedContainer()
     {
@@ -28,7 +29,7 @@ public class StackTest
         stack.PlaceContainer(emptyContainer);
         stack.PlaceContainer(weightedContainer);
         //assert
-        Assert.AreEqual(weightedContainer, stack.Containers[^1]);
+        Assert.AreEqual(weightedContainer, stack.Containers[^1],"Container not placed in the right spot");
     }
 
     [TestMethod]
@@ -37,7 +38,7 @@ public class StackTest
         //arrange
         var ship = new Ship(1, 1);
         var weight = 29900;
-        
+
         //act
         for (var i = 0; i < 10; i++)
         {

@@ -117,11 +117,7 @@ public class Dockyard
             {
                 widthIndex /= 2;
             }
-            
-            if (!_dockedShip.Rows[widthIndex].Stacks[0].PlaceContainer(CooledContainers[i]))
-            {
-                return;
-            }
+
             _dockedShip.Rows[widthIndex].Stacks[lengthIndex]
                 .PlaceContainer(ValuableContainers[i]);
             _dockedShip.MaxWeight -= ValuableContainers[1].weight;

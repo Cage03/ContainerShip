@@ -14,6 +14,6 @@ public class RowTest
         //act
         var row = new Row(length);
         //assert
-        Assert.AreEqual(length, row.Stacks.Count);
+        Assert.AreEqual(length, row.Stacks.Count, "Not enough rows created");
     }
 }

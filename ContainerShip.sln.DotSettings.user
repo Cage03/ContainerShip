@@ -4,6 +4,19 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1f33ed73_002D55ea_002D45a9_002D9a6c_002Df58d9453d6d7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=38d40a76_002Da9c9_002D4ef0_002D8dcf_002D364001268bb6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=38d40a76_002Da9c9_002D4ef0_002D8dcf_002D364001268bb6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4005877d_002D888d_002D4183_002Da8aa_002D0173ae20c40b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SkipRowTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::AA9CCB93-CC62-4E29-8544-12F0667CD532::net6.0::ContainerShipTests.DockyardTest.SkipRowTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4cfd4eca_002Dd7d7_002D4306_002D9c09_002D032bb0e7bb73/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SkipRowTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::AA9CCB93-CC62-4E29-8544-12F0667CD532::net6.0::ContainerShipTests.DockyardTest.SkipRowTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=92849823_002Dddaf_002D42f3_002D9390_002D45d3e946fc1b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SkipRowTest #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
