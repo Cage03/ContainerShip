@@ -116,7 +116,7 @@ public class DockyardTest
         foreach (var valuableContainer in valuableContainers)
         {
             Assert.IsTrue(dockyard.ValuableContainers.Contains(valuableContainer),
-                "Ship does not contain" + valuableContainer);
+                $"Ship does not contain({valuableContainer})");
         }
     }
 
